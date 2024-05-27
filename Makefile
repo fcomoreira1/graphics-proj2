@@ -1,16 +1,11 @@
 CXX=g++
-CXXFLAGS=-std=c++17 -O3 -fopenmp
+CXXFLAGS=-g -std=c++17 -O3 -fopenmp
 
 EXE=render
 ODIR=build
 
-SRCS = $(wildcard *.cpp)
-DEPS = $(wildcard *.h) $(wildcard ./scenes/*.h) 
-_OBJS = $(subst .cpp,.o,$(SRCS))
-OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
-
-$(ODIR)/%.o: %.cpp $(DEPS)
-	$(CXX) -c -o $@ $< $(CXXFLAGS)
+SRCS = $(wildcard *.cpp) $(wildcard */*.c)
+DEPS = $(wildcard *.h) 
 
 render: $(SRCS) $(DEPS)
 	$(CXX) -o render $(SRCS) $(CXXFLAGS) $(LIBS)
