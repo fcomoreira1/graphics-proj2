@@ -132,7 +132,7 @@ enum {
     /** The line-search step became smaller than lbfgs_parameter_t::min_step. */
     LBFGSERR_MINIMUMSTEP,
     /** The line-search step became larger than lbfgs_parameter_t::max_step. */
-    LBFGSERR_MAXIMUMSTEP,
+    LBFGSERR_MAXIMUMSTEP = -10000,
     /** The line-search routine reaches the maximum number of evaluations. */
     LBFGSERR_MAXIMUMLINESEARCH,
     /** The algorithm routine reaches the maximum number of iterations. */

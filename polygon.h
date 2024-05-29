@@ -11,6 +11,7 @@ class Polygon {
     Polygon(std::vector<Vector> vertices) : vertices(vertices) {}
     Polygon clip(Vector u, Vector v) const;
     double area() const;
+    Vector centroid() const;
     Vector operator[](int i) const {
         if (i < 0 or i >= vertices.size()) {
             std::cerr << "Polygon index out of range" << std::endl;
@@ -26,14 +27,14 @@ class Polygon {
         return vertices[i];
     }
     int size() const { return vertices.size(); }
+    static double area_triangle(Vector A, Vector B, Vector C);
 };
 Polygon sutherland_hodgman(const Polygon &subject, const Polygon &clipper);
-std::vector<Polygon> venoroi(const Polygon &P,
+std::vector<Polygon> venoroi(const std::vector<Vector> &points,
                              const Polygon &default_shape = Polygon(std::vector(
                                  {Vector(0, 0, 0), Vector(1, 0, 0),
                                   Vector(1, 1, 0), Vector(0, 1, 0)})));
 std::vector<Polygon> power_diagrams(
-    const Polygon &P, const lbfgsfloatval_t *weights,
+    const std::vector<Vector> &points, const lbfgsfloatval_t *weights,
     const Polygon &default_shape = Polygon(std::vector(
         {Vector(0, 0, 0), Vector(1, 0, 0), Vector(1, 1, 0), Vector(0, 1, 0)})));
-std::vector<Polygon> optim_power_diagrams(const Polygon &P, double *lambda);
