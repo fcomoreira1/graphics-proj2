@@ -22,9 +22,9 @@ void save_svg(const std::vector<Polygon> &polygons, std::string filename,
     for (int i = 0; i < polygons.size(); i++) {
         fprintf(f, "<g>\n");
         fprintf(f, "<polygon points = \"");
-        for (int j = 0; j < polygons[i].vertices.size(); j++) {
-            fprintf(f, "%3.3f, %3.3f ", (polygons[i].vertices[j][0] * 1000),
-                    (1000 - polygons[i].vertices[j][1] * 1000));
+        for (int j = 0; j < polygons[i].size(); j++) {
+            fprintf(f, "%3.3f, %3.3f ", (polygons[i][j][0] * 1000),
+                    (1000 - polygons[i][j][1] * 1000));
         }
         fprintf(f, "\"\nfill = \"%s\" stroke = \"black\"/>\n", fillcol.c_str());
         fprintf(f, "</g>\n");
@@ -42,9 +42,9 @@ void save_svg(const std::vector<Polygon> &polygons,
     for (int i = 0; i < polygons.size(); i++) {
         fprintf(f, "<g>\n");
         fprintf(f, "<polygon points = \"");
-        for (int j = 0; j < polygons[i].vertices.size(); j++) {
-            fprintf(f, "%3.3f, %3.3f ", (polygons[i].vertices[j][0] * 1000),
-                    (1000 - polygons[i].vertices[j][1] * 1000));
+        for (int j = 0; j < polygons[i].size(); j++) {
+            fprintf(f, "%3.3f, %3.3f ", (polygons[i][j][0] * 1000),
+                    (1000 - polygons[i][j][1] * 1000));
         }
         fprintf(f, "\"\nfill = \"%s\" stroke = \"black\"/>\n", fillcol.c_str());
         fprintf(f, "</g>\n");
@@ -80,9 +80,9 @@ void save_svg_animated(const std::vector<Polygon> &polygons,
     fprintf(f, "<g>\n");
     for (int i = 0; i < polygons.size(); i++) {
         fprintf(f, "<polygon points = \"");
-        for (int j = 0; j < polygons[i].vertices.size(); j++) {
-            fprintf(f, "%3.3f, %3.3f ", (polygons[i].vertices[j][0] * 1000),
-                    (1000 - polygons[i].vertices[j][1] * 1000));
+        for (int j = 0; j < polygons[i].size(); j++) {
+            fprintf(f, "%3.3f, %3.3f ", (polygons[i][j][0] * 1000),
+                    (1000 - polygons[i][j][1] * 1000));
         }
         fprintf(f, "\"\nfill = \"none\" stroke = \"black\"/>\n");
     }
@@ -124,11 +124,11 @@ void save_frame(const std::vector<Polygon> &cells, std::string filename,
     for (int i = 0; i < cells.size(); i++) {
 
         double bminx = 1E9, bminy = 1E9, bmaxx = -1E9, bmaxy = -1E9;
-        for (int j = 0; j < cells[i].vertices.size(); j++) {
-            bminx = std::min(bminx, cells[i].vertices[j][0]);
-            bminy = std::min(bminy, cells[i].vertices[j][1]);
-            bmaxx = std::max(bmaxx, cells[i].vertices[j][0]);
-            bmaxy = std::max(bmaxy, cells[i].vertices[j][1]);
+        for (int j = 0; j < cells[i].size(); j++) {
+            bminx = std::min(bminx, cells[i][j][0]);
+            bminy = std::min(bminy, cells[i][j][1]);
+            bmaxx = std::max(bmaxx, cells[i][j][0]);
+            bmaxy = std::max(bmaxy, cells[i][j][1]);
         }
         bminx = std::min(W - 1., std::max(0., W * bminx));
         bminy = std::min(H - 1., std::max(0., H * bminy));
@@ -140,17 +140,11 @@ void save_frame(const std::vector<Polygon> &cells, std::string filename,
                 int prevSign = 0;
                 bool isInside = true;
                 double mindistEdge = 1E9;
-                for (int j = 0; j < cells[i].vertices.size(); j++) {
-                    double x0 = cells[i].vertices[j][0] * W;
-                    double y0 = cells[i].vertices[j][1] * H;
-                    double x1 =
-                        cells[i]
-                            .vertices[(j + 1) % cells[i].vertices.size()][0] *
-                        W;
-                    double y1 =
-                        cells[i]
-                            .vertices[(j + 1) % cells[i].vertices.size()][1] *
-                        H;
+                for (int j = 0; j < cells[i].size(); j++) {
+                    double x0 = cells[i][j][0] * W;
+                    double y0 = cells[i][j][1] * H;
+                    double x1 = cells[i][(j + 1) % cells[i].size()][0] * W;
+                    double y1 = cells[i][(j + 1) % cells[i].size()][1] * H;
                     double det = (x - x0) * (y1 - y0) - (y - y0) * (x1 - x0);
                     int sign = sgn(det);
                     if (prevSign == 0)
