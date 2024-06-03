@@ -52,7 +52,7 @@ void test_optim_power_diagrams() {
 void test_fluid() {
     int NPoints = 20;
     double expected_volume = 0.02;
-    double dt = 0.002;
+    double dt = 0.02;
     std::vector<Vector> random_points(NPoints);
     for (int i = 0; i < NPoints; i++) {
         random_points[i] =
@@ -62,8 +62,9 @@ void test_fluid() {
     Fluid fluid(expected_volume, random_points);
     for (int i = 0; i < 100; i++) {
         fluid.simulate_time_step(dt);
-        std::cerr << "Saving Frame " << i << "...";
-        save_frame(fluid.power_diagrams, "image_fluid", i);
+        save_svg(fluid.power_diagrams, fluid.positions,
+                 "fluid/image_fluid" + std::to_string(i) + ".svg");
+        // save_frame(fluid.power_diagrams, "image_fluid", i);
         std::cerr << "Saved frame " << i << std::endl;
     }
 }

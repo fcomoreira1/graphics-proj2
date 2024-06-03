@@ -5,7 +5,7 @@
 #include <vector>
 
 const bool ENABLE_KDTREE = false;
-const int NCirc = 1000;
+const int NCirc = 100;
 
 class Polygon {
     std::vector<Vector> vertices;

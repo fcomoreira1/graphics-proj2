@@ -119,9 +119,12 @@ static int sgn(double x) { return x < 0 ? -1 : x > 0; }
 void save_frame(const std::vector<Polygon> &cells, std::string filename,
                 int frameid = 0) {
     int W = 1000, H = 1000;
+    std::cerr << "Saving frame " << frameid << std::endl;
     std::vector<unsigned char> image(W * H * 3, 255);
+    std::cerr << "Created image" << std::endl;
 #pragma omp parallel for schedule(dynamic)
     for (int i = 0; i < cells.size(); i++) {
+        std::cerr << "Processing cell " << i << std::endl;
 
         double bminx = 1E9, bminy = 1E9, bmaxx = -1E9, bmaxy = -1E9;
         for (int j = 0; j < cells[i].size(); j++) {
@@ -165,16 +168,13 @@ void save_frame(const std::vector<Polygon> &cells, std::string filename,
                     mindistEdge = std::min(mindistEdge, distEdge);
                 }
                 if (isInside) {
-                    // if (i < N) {   // the N first particles may represent
-                    // fluid, displayed in blue 	image[((H - y - 1)*W +
-                    // x)
-                    // * 3]
-                    // =
-                    // 0; 	image[((H - y - 1)*W + x) * 3 + 1] = 0;
-                    // image[((H
-                    // - y - 1)*W + x) * 3 + 2] = 255;
-                    // }
-                    if (mindistEdge <= 2) {
+                    if (i < cells.size() - 1) {
+                        // the N first particles may represent
+                        // fluid, displayed in blue
+                        image[((H - y - 1) * W + x) * 3] = 0;
+                        image[((H - y - 1) * W + x) * 3 + 1] = 0;
+                        image[((H - y - 1) * W + x) * 3 + 2] = 255;
+                    } else if (mindistEdge <= 2) {
                         image[((H - y - 1) * W + x) * 3] = 0;
                         image[((H - y - 1) * W + x) * 3 + 1] = 0;
                         image[((H - y - 1) * W + x) * 3 + 2] = 0;
@@ -185,5 +185,6 @@ void save_frame(const std::vector<Polygon> &cells, std::string filename,
     }
     std::ostringstream os;
     os << filename << frameid << ".png";
+    std::cerr << "Finished Processing" << std::endl;
     stbi_write_png(os.str().c_str(), W, H, 3, &image[0], 0);
 }

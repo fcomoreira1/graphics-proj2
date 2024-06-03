@@ -79,7 +79,7 @@ std::vector<Polygon> power_diagrams(const std::vector<Vector> &points,
     std::vector<Polygon> Pow(N);
     // std::vector<u_long> ret_indexes;
     // KDTree kdtree(points);
-#pragma omp parallel
+    // #pragma omp parallel
     for (int i = 0; i < N; i++) {
         Polygon cell = default_shape;
         auto clip_cell = [&i, &points, &cell, &weights](int j) {
@@ -121,7 +121,7 @@ std::vector<Polygon> power_diagrams(const std::vector<Vector> &points,
                 }
             }
         }
-#pragma omp critical
+        // #pragma omp critical
         { Pow[i] = cell; }
     }
     return Pow;

@@ -12,7 +12,7 @@ void Fluid::simulate_time_step(double dt) {
     for (int i = 0; i < N; i++) {
         lambda[i] = volume_fluid / N;
     }
-    power_diagrams = semidiscrete_ot(positions, lambda, volume_fluid);
+    this->power_diagrams = semidiscrete_ot(positions, lambda, volume_fluid);
     std::cout << "Power diagrams computed" << std::endl;
     std::cout << "Power diagrams size: " << power_diagrams.size() << std::endl;
     for (int i = 0; i < N; i++) {
