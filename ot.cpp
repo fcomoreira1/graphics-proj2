@@ -34,8 +34,8 @@ static lbfgsfloatval_t evaluate(void *instance, const lbfgsfloatval_t *weights,
         g -= integrate_cell(Pow[i], inst->points[i]) - grad[i] * weights[i];
     }
     double des_volume_air = 1 - inst->desired_volume_fluid;
-    g -= weights[n] * (des_volume_air - est_vol_air);
-    grad[n] = -(des_volume_air - est_vol_air);
+    g -= weights[n - 1] * (des_volume_air - est_vol_air);
+    grad[n - 1] = -(des_volume_air - est_vol_air);
     return g;
 }
 
@@ -64,16 +64,26 @@ std::vector<Polygon> semidiscrete_ot(const std::vector<Vector> &points,
     OptimizationInstance instance = {points, lambda, desired_volume};
 
     lbfgs_parameter_t param;
-    lbfgs_parameter_init(&param);
     param.linesearch = LBFGS_LINESEARCH_BACKTRACKING_WOLFE;
     param.max_iterations = 1000;
+    lbfgs_parameter_init(&param);
+
     int ret = lbfgs(N + 1, weights, &fx, evaluate, progress, (void *)&instance,
                     &param);
     if (ret < 0 && ret != LBFGSERR_MAXIMUMITERATION) {
         std::cerr << "LBFGS optimization failed with code: " << ret
                   << std::endl;
     }
-    auto Pow = power_diagrams(points, weights);
+    auto Pow = power_diagrams(points, weights, desired_volume < 1.0);
+    std::cout << "Dumping weights" << std::endl;
+    double total_weight = 0.0;
+    for (int i = 0; i < N; i++) {
+        std::cout << "area_" << i << " -> "
+                  << Pow[i].area() << std::endl;
+        total_weight += Pow[i].area();
+    }
+    std::cout << "Area air -> " << 1 - total_weight << std::endl;
+
     lbfgs_free(weights);
     return Pow;
 }

@@ -579,14 +579,12 @@ lbfgs_exit:
         }
         vecfree(lm);
     }
-    fprintf(stderr, "lbfgs_exit\n");
     vecfree(pg);
     vecfree(w);
     vecfree(d);
     vecfree(gp);
     vecfree(g);
     vecfree(xp);
-    fprintf(stderr, "lbfgs_ret\n");
 
     return ret;
 }

@@ -77,9 +77,8 @@ std::vector<Polygon> power_diagrams(const std::vector<Vector> &points,
                                     const Polygon &default_shape) {
     int N = points.size();
     std::vector<Polygon> Pow(N);
-    // std::vector<u_long> ret_indexes;
-    // KDTree kdtree(points);
-    // #pragma omp parallel
+    KDTree kdtree(points);
+#pragma omp parallel
     for (int i = 0; i < N; i++) {
         Polygon cell = default_shape;
         auto clip_cell = [&i, &points, &cell, &weights](int j) {
@@ -94,10 +93,11 @@ std::vector<Polygon> power_diagrams(const std::vector<Vector> &points,
         };
         if (ENABLE_KDTREE) {
             std::cout << "Using kdtree\n";
-            // double best_dist = -1;
-            // kdtree.findNeighbors(points[i].data, init_k, ret_indexes);
-            // for (auto j : ret_indexes)
-            //     clip_cell(j);
+            double best_dist = -1;
+            std::vector<u_long> ret_indexes;
+            kdtree.findNeighbors(points[i].data, init_k, ret_indexes);
+            for (auto j : ret_indexes)
+                clip_cell(j);
         } else {
             for (int j = 0; j < N; j++)
                 clip_cell(j);
@@ -105,6 +105,7 @@ std::vector<Polygon> power_diagrams(const std::vector<Vector> &points,
 
         if (use_air) {
             if (weights[N] > weights[i]) {
+                std::cerr << "cell area is negative\n";
                 cell = Polygon();
             } else {
                 double radius = std::sqrt(weights[i] - weights[N]);
@@ -115,13 +116,13 @@ std::vector<Polygon> power_diagrams(const std::vector<Vector> &points,
                         points[i] + radius * Vector(cos(ang1), sin(ang1), 0);
                     Vector v =
                         points[i] + radius * Vector(cos(ang2), sin(ang2), 0);
-                    Vector N = (u + v) / 2 - points[i];
-                    N.normalize();
-                    cell = cell.clip(u, N);
+                    Vector Norm = (u + v) / 2 - points[i];
+                    Norm.normalize();
+                    cell = cell.clip(u, Norm);
                 }
             }
         }
-        // #pragma omp critical
+#pragma omp critical
         { Pow[i] = cell; }
     }
     return Pow;
