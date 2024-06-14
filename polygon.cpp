@@ -71,41 +71,53 @@ Polygon sutherland_hodgman(const Polygon &subject, const Polygon &clipper) {
     return output;
 }
 
-std::vector<Polygon> power_diagrams(const std::vector<Vector> &points,
+std::vector<Polygon> power_diagrams(std::vector<Vector> &points,
                                     const lbfgsfloatval_t *weights,
                                     const bool use_air,
                                     const Polygon &default_shape) {
     int N = points.size();
     std::vector<Polygon> Pow(N);
     KDTree kdtree(points);
+    auto clip_cell = [&points, &weights](int i, int j, Polygon &cell) {
+        if (i == j)
+            return;
+        Vector M = 0.5 * (points[i] + points[j]);
+        Vector Norm = points[j] - points[i];
+        Vector Mprime =
+            M + (weights[i] - weights[j]) * (Norm) / (2 * Norm.norm2());
+        Norm.normalize();
+        cell = cell.clip(Mprime, Norm);
+    };
 #pragma omp parallel
     for (int i = 0; i < N; i++) {
         Polygon cell = default_shape;
-        auto clip_cell = [&i, &points, &cell, &weights](int j) {
-            if (i == j)
-                return;
-            Vector M = 0.5 * (points[i] + points[j]);
-            Vector Norm = points[j] - points[i];
-            Vector Mprime =
-                M + (weights[i] - weights[j]) * (Norm) / (2 * Norm.norm2());
-            Norm.normalize();
-            cell = cell.clip(Mprime, Norm);
-        };
+
         if (ENABLE_KDTREE) {
-            std::cout << "Using kdtree\n";
-            double best_dist = -1;
             std::vector<u_long> ret_indexes;
-            kdtree.findNeighbors(points[i].data, init_k, ret_indexes);
-            for (auto j : ret_indexes)
-                clip_cell(j);
+            int k = init_k;
+            while (true) {
+                kdtree.findNeighbors(points[i].data, k, ret_indexes);
+                for (auto j : ret_indexes)
+                    clip_cell(i, j, cell);
+                double max_dist_cell = -1;
+                for (int j = 0; j < cell.size(); j++) {
+                    max_dist_cell =
+                        std::max(max_dist_cell, (points[i] - cell[j]).norm());
+                }
+                double cur_dist =
+                    (points[ret_indexes[ret_indexes.size() - 1]] - points[i])
+                        .norm();
+                if (k >= N || cur_dist > 2 * max_dist_cell)
+                    break;
+                k = 2 * k;
+            }
         } else {
             for (int j = 0; j < N; j++)
-                clip_cell(j);
+                clip_cell(i, j, cell);
         }
 
         if (use_air) {
             if (weights[N] > weights[i]) {
-                std::cerr << "cell area is negative\n";
                 cell = Polygon();
             } else {
                 double radius = std::sqrt(weights[i] - weights[N]);
@@ -128,7 +140,7 @@ std::vector<Polygon> power_diagrams(const std::vector<Vector> &points,
     return Pow;
 }
 
-std::vector<Polygon> venoroi(const std::vector<Vector> &points,
+std::vector<Polygon> venoroi(std::vector<Vector> &points,
                              const Polygon &default_shape) {
     lbfgsfloatval_t *weights = new lbfgsfloatval_t[points.size()];
     memset(weights, 0, points.size() * sizeof(lbfgsfloatval_t));

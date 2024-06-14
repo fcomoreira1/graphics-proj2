@@ -50,7 +50,7 @@ static int progress(void *instance, const lbfgsfloatval_t *x,
     return (k > 200 && gnorm < 1e-6) ? 1 : 0;
 }
 
-std::vector<Polygon> semidiscrete_ot(const std::vector<Vector> &points,
+std::vector<Polygon> semidiscrete_ot(std::vector<Vector> &points,
                                      const double *lambda,
                                      const double desired_volume) {
     const int N = points.size();

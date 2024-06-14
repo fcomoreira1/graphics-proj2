@@ -4,14 +4,16 @@
 #include <iostream>
 #include <vector>
 
-const int init_k = 100;
+const int init_k = 20;
 
-struct PointCloud {
+class PointCloud {
+  public:
+    std::vector<Vector> *pts_ptr;
 
-    std::vector<Vector> pts;
+    PointCloud(std::vector<Vector> *points) : pts_ptr(points) {}
 
     // Must return the number of data points
-    inline size_t kdtree_get_point_count() const { return pts.size(); }
+    inline size_t kdtree_get_point_count() const { return (*pts_ptr).size(); }
 
     // Returns the dim'th component of the idx'th point in the class:
     // Since this is inlined and the "dim" argument is typically an immediate
@@ -19,11 +21,11 @@ struct PointCloud {
     //  "if/else's" are actually solved at compile time.
     inline double kdtree_get_pt(const size_t idx, const size_t dim) const {
         if (dim == 0)
-            return pts[idx].data[0];
+            return (*pts_ptr)[idx].data[0];
         else if (dim == 1)
-            return pts[idx].data[1];
+            return (*pts_ptr)[idx].data[1];
         else
-            return pts[idx].data[2];
+            return (*pts_ptr)[idx].data[2];
     }
 
     // Optional bounding-box computation: return false to default to a standard
@@ -43,8 +45,8 @@ class KDTree {
         >;
 
   public:
-    KDTree(const std::vector<Vector> &points) {
-        const PointCloud cloud{points};
+    KDTree(std::vector<Vector> &points) {
+        const PointCloud cloud{&points};
         index = new my_kd_tree_t(3 /*dim*/, cloud, {10 /* max leaf */});
     }
     ~KDTree() { delete index; }
@@ -52,17 +54,12 @@ class KDTree {
                        std::vector<u_long> &ret_indexes) {
         ret_indexes.resize(k);
         std::vector<double> out_dist_sqr(k);
-        nanoflann::KNNResultSet<double> resultSet(k);
-        resultSet.init(&ret_indexes[0], &out_dist_sqr[0]);
-        index->findNeighbors(resultSet, query_pt);
+        nanoflann::KNNResultSet<double> result_set(k);
+        result_set.init(&ret_indexes[0], &out_dist_sqr[0]);
+        index->findNeighbors(result_set, query_pt);
         // u_long num_results =
         //     index->knnSearch(query_pt, k, &ret_indexes[0], &out_dist_sqr[0]);
-        ret_indexes.resize(resultSet.size());
-        std::cout << "Dumping the distances for debugging" << std::endl;
-        for (int i = 0; i < 4; i++) {
-            std::cout << out_dist_sqr[i] << ", ";
-        }
-        std::cout << std::endl;
+        ret_indexes.resize(result_set.size());
     }
 
   private:
