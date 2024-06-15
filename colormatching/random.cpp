@@ -12,7 +12,7 @@ Vector random_direction() {
 
     return Vector(cos(r1) * auxr2,
                   sin(r1) * auxr2,
-                  sqrt(1 - 2 * r2));
+                  1 - 2 * r2);
 }
 
 // Code from Wikipedia on BoxMuller
