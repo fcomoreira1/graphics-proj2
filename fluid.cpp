@@ -20,6 +20,22 @@ void Fluid::simulate_time_step(double dt) {
         Vector F = spring + mi * Vector(0, -10, 0);
         velocities[i] = velocities[i] + dt * F / mi;
         positions[i] = positions[i] + dt * velocities[i];
+        if (positions[i][0] < 0) {
+            positions[i][0] = 0;
+            velocities[i][0] = 0;
+        }
+        if (positions[i][1] < 0) {
+            positions[i][1] = 0;
+            velocities[i][1] = 0;
+        }
+        if (positions[i][0] > 1) {
+            positions[i][0] = 1;
+            velocities[i][0] = 0;
+        }
+        if (positions[i][1] > 1) {
+            positions[i][1] = 1;
+            velocities[i][1] = 0;
+        }
     }
     delete[] lambda;
 }

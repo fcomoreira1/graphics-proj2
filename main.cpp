@@ -24,7 +24,7 @@ void test_vonoroi(int num_points = 2000) {
             Vector(uniform_distribution(), uniform_distribution(), 0));
     }
     std::vector<Polygon> show = venoroi(random_points);
-    save_svg(show, "images/image_vonoroi.svg");
+    save_svg(show, random_points, "images/image_vonoroi.svg");
     std::cout << "Image saved in images/image_vonoroi.svg" << std::endl;
 }
 
@@ -39,6 +39,7 @@ void test_optim_power_diagrams(int num_points = 200){
     double s;
     for (int i = 0; i < num_points; i++) {
         lambda[i] = exp(-(random_points[i] - C).norm2() / 0.02);
+        // lambda[i] = 1.0 / num_points;
         s += lambda[i];
     }
     for (int i = 0; i < random_points.size(); i++) {
@@ -50,10 +51,10 @@ void test_optim_power_diagrams(int num_points = 200){
 }
 
 void test_fluid() {
-    int NPoints = 200;
-    int num_frames = 100;
+    int NPoints = 250;
+    int num_frames = 200;
     double expected_volume = 0.4;
-    double dt = 0.008;
+    double dt = 0.004;
 
     std::vector<Vector> random_points(NPoints);
     for (int i = 0; i < NPoints; i++) {

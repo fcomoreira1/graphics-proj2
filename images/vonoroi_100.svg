@@ -1,0 +1,802 @@
+<svg xmlns = "http://www.w3.org/2000/svg" width = "1000" height = "1000">
+<g>
+<polygon points = "928.961, 882.881 925.098, 871.353 854.267, 808.669 808.323, 820.934 798.819, 851.776 843.656, 916.370 886.487, 942.500 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "190.127, 73.889 274.458, 83.779 284.958, 67.887 272.983, 0.000 185.798, 0.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "633.619, 713.014 611.348, 659.460 578.882, 653.929 508.537, 692.069 527.259, 721.028 624.219, 726.115 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "977.722, 715.397 925.098, 871.353 928.961, 882.881 1000.000, 890.202 1000.000, 705.612 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "894.771, 3.040 901.743, 71.273 902.312, 72.478 1000.000, 80.846 1000.000, 0.000 894.721, 0.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "944.192, 242.833 949.091, 305.646 1000.000, 267.642 1000.000, 249.512 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "798.819, 851.776 792.489, 856.553 769.348, 908.444 843.656, 916.370 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "16.760, 826.373 37.237, 798.387 35.688, 784.453 0.000, 672.945 0.000, 828.532 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "699.815, 862.244 696.260, 852.736 604.980, 814.560 556.379, 871.696 556.133, 877.527 665.848, 916.434 704.186, 904.856 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "431.890, 160.780 533.719, 218.392 568.742, 71.511 447.047, 128.487 428.257, 154.355 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "428.257, 154.355 412.847, 145.456 338.307, 159.944 339.629, 251.126 393.906, 230.266 431.890, 160.780 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "633.619, 713.014 624.219, 726.115 604.640, 800.952 604.980, 814.560 696.260, 852.736 745.575, 779.156 741.844, 752.887 717.882, 711.989 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "712.518, 546.620 682.573, 571.737 724.999, 644.683 772.598, 581.508 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "417.258, 570.642 465.705, 544.299 431.726, 496.032 411.229, 490.289 383.301, 555.846 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "399.457, 814.093 392.061, 785.976 255.401, 703.377 228.633, 757.929 223.839, 788.519 278.633, 893.272 364.140, 924.654 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "278.979, 142.044 224.813, 213.907 336.274, 254.561 339.629, 251.126 338.307, 159.944 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "109.432, 78.866 56.551, 104.726 89.533, 172.145 134.414, 187.941 185.316, 194.639 176.289, 82.713 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "736.352, 22.958 894.771, 3.040 894.721, 0.000 731.066, 0.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "704.186, 904.856 724.808, 931.529 769.348, 908.444 792.489, 856.553 699.815, 862.244 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "729.545, 478.324 624.210, 408.185 607.649, 525.187 649.041, 575.925 682.573, 571.737 712.518, 546.620 729.197, 493.377 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "223.839, 788.519 122.619, 887.751 205.264, 929.986 278.633, 893.272 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "16.760, 826.373 0.000, 828.532 0.000, 1000.000 93.660, 1000.000 109.312, 889.741 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "465.521, 655.304 507.983, 610.771 516.385, 557.746 515.543, 550.568 511.596, 546.478 465.705, 544.299 417.258, 570.642 429.480, 633.146 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "729.545, 478.324 729.197, 493.377 832.500, 559.081 838.543, 554.181 776.742, 451.323 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "722.222, 96.463 901.926, 73.263 902.312, 72.478 901.743, 71.273 737.171, 28.204 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "93.418, 349.131 45.431, 248.156 0.000, 241.521 0.000, 379.885 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "647.726, 210.892 545.608, 239.115 522.265, 343.222 542.482, 367.414 617.931, 398.921 702.741, 202.348 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "813.786, 587.933 832.500, 559.081 729.197, 493.377 712.518, 546.620 772.598, 581.508 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "945.633, 365.317 883.552, 350.162 817.955, 435.832 901.154, 501.144 980.335, 392.529 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "0.000, 79.538 0.000, 241.521 45.431, 248.156 89.533, 172.145 56.551, 104.726 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "712.132, 199.013 780.975, 276.055 813.551, 277.532 895.578, 202.845 880.074, 126.424 722.770, 147.539 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "358.113, 59.619 399.053, 113.448 459.916, 0.000 394.120, 0.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "649.041, 575.925 607.649, 525.187 515.543, 550.568 516.385, 557.746 620.324, 623.117 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "745.575, 779.156 696.260, 852.736 699.815, 862.244 792.489, 856.553 798.819, 851.776 808.323, 820.934 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "863.994, 735.156 741.844, 752.887 745.575, 779.156 808.323, 820.934 854.267, 808.669 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "284.958, 67.887 358.113, 59.619 394.120, 0.000 272.983, 0.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "23.370, 572.082 0.000, 568.423 0.000, 672.945 35.688, 784.453 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "901.731, 710.237 872.144, 722.047 863.994, 735.156 854.267, 808.669 925.098, 871.353 977.722, 715.397 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "902.312, 72.478 901.926, 73.263 880.074, 126.424 895.578, 202.845 919.082, 210.639 1000.000, 172.905 1000.000, 80.846 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "919.082, 210.639 944.192, 242.833 1000.000, 249.512 1000.000, 172.905 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "886.487, 942.500 843.656, 916.370 769.348, 908.444 724.808, 931.529 726.679, 942.611 756.815, 1000.000 876.054, 1000.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "620.240, 400.400 624.210, 408.185 729.545, 478.324 776.742, 451.323 789.664, 438.390 750.666, 331.802 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "712.132, 199.013 702.741, 202.348 617.931, 398.921 620.240, 400.400 750.666, 331.802 780.975, 276.055 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "611.348, 659.460 620.324, 623.117 516.385, 557.746 507.983, 610.771 578.882, 653.929 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "604.980, 814.560 604.640, 800.952 517.124, 764.245 489.868, 830.060 556.379, 871.696 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "351.828, 547.246 232.491, 655.284 251.299, 684.017 357.830, 645.740 382.008, 555.962 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "204.475, 425.072 315.225, 468.548 385.930, 452.804 401.797, 430.623 424.407, 386.003 309.365, 351.287 202.439, 409.615 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "109.432, 78.866 176.289, 82.713 190.127, 73.889 185.798, 0.000 132.650, 0.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "376.456, 646.099 429.480, 633.146 417.258, 570.642 383.301, 555.846 382.008, 555.962 357.830, 645.740 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "339.629, 251.126 336.274, 254.561 339.666, 294.846 447.357, 311.934 393.906, 230.266 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "399.053, 113.448 412.847, 145.456 428.257, 154.355 447.047, 128.487 488.476, 0.000 459.916, 0.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "702.741, 202.348 712.132, 199.013 722.770, 147.539 715.718, 118.443 576.183, 70.641 647.726, 210.892 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "556.133, 877.527 556.379, 871.696 489.868, 830.060 399.457, 814.093 364.140, 924.654 391.346, 1000.000 523.046, 1000.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "507.983, 610.771 465.521, 655.304 467.510, 669.326 508.537, 692.069 578.882, 653.929 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "949.091, 305.646 945.633, 365.317 980.335, 392.529 1000.000, 393.293 1000.000, 267.642 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "813.551, 277.532 883.552, 350.162 945.633, 365.317 949.091, 305.646 944.192, 242.833 919.082, 210.639 895.578, 202.845 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "620.240, 400.400 617.931, 398.921 542.482, 367.414 509.427, 456.447 511.596, 546.478 515.543, 550.568 607.649, 525.187 624.210, 408.185 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "509.427, 456.447 461.698, 472.821 431.726, 496.032 465.705, 544.299 511.596, 546.478 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "522.265, 343.222 498.954, 344.586 424.407, 386.003 401.797, 430.623 461.698, 472.821 509.427, 456.447 542.482, 367.414 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "570.479, 67.931 568.742, 71.511 533.719, 218.392 545.608, 239.115 647.726, 210.892 576.183, 70.641 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "980.335, 392.529 901.154, 501.144 900.098, 527.837 934.659, 563.974 1000.000, 593.781 1000.000, 393.293 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "928.961, 882.881 886.487, 942.500 876.054, 1000.000 1000.000, 1000.000 1000.000, 890.202 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "649.041, 575.925 620.324, 623.117 611.348, 659.460 633.619, 713.014 717.882, 711.989 734.648, 686.461 724.999, 644.683 682.573, 571.737 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "872.144, 722.047 901.731, 710.237 884.109, 636.459 833.890, 621.282 838.020, 693.182 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "724.808, 931.529 704.186, 904.856 665.848, 916.434 582.889, 1000.000 621.490, 1000.000 726.679, 942.611 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "185.922, 386.208 220.523, 215.999 185.316, 194.639 134.414, 187.941 96.413, 349.942 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "0.000, 79.538 56.551, 104.726 109.432, 78.866 132.650, 0.000 0.000, 0.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "872.144, 722.047 838.020, 693.182 760.930, 675.994 734.648, 686.461 717.882, 711.989 741.844, 752.887 863.994, 735.156 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "665.848, 916.434 556.133, 877.527 523.046, 1000.000 582.889, 1000.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "726.679, 942.611 621.490, 1000.000 756.815, 1000.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "385.930, 452.804 411.229, 490.289 431.726, 496.032 461.698, 472.821 401.797, 430.623 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "109.312, 889.741 122.619, 887.751 223.839, 788.519 228.633, 757.929 55.963, 781.899 37.237, 798.387 16.760, 826.373 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "813.786, 587.933 772.598, 581.508 724.999, 644.683 734.648, 686.461 760.930, 675.994 815.121, 600.715 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "364.140, 924.654 278.633, 893.272 205.264, 929.986 210.862, 1000.000 391.346, 1000.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "900.098, 527.837 901.154, 501.144 817.955, 435.832 789.664, 438.390 776.742, 451.323 838.543, 554.181 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "894.771, 3.040 736.352, 22.958 737.171, 28.204 901.743, 71.273 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "148.101, 574.670 23.370, 572.082 35.688, 784.453 37.237, 798.387 55.963, 781.899 157.743, 590.405 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "624.219, 726.115 527.259, 721.028 511.925, 752.805 517.124, 764.245 604.640, 800.952 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "284.958, 67.887 274.458, 83.779 278.979, 142.044 338.307, 159.944 412.847, 145.456 399.053, 113.448 358.113, 59.619 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "122.619, 887.751 109.312, 889.741 93.660, 1000.000 210.862, 1000.000 205.264, 929.986 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "220.523, 215.999 224.813, 213.907 278.979, 142.044 274.458, 83.779 190.127, 73.889 176.289, 82.713 185.316, 194.639 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "467.510, 669.326 426.201, 741.935 423.580, 748.972 511.925, 752.805 527.259, 721.028 508.537, 692.069 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "511.925, 752.805 423.580, 748.972 392.061, 785.976 399.457, 814.093 489.868, 830.060 517.124, 764.245 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "570.479, 67.931 576.183, 70.641 715.718, 118.443 722.222, 96.463 737.171, 28.204 736.352, 22.958 731.066, 0.000 552.024, 0.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "522.265, 343.222 545.608, 239.115 533.719, 218.392 431.890, 160.780 393.906, 230.266 447.357, 311.934 498.954, 344.586 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "23.370, 572.082 148.101, 574.670 204.475, 425.072 202.439, 409.615 185.922, 386.208 96.413, 349.942 93.418, 349.131 0.000, 379.885 0.000, 568.423 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "467.510, 669.326 465.521, 655.304 429.480, 633.146 376.456, 646.099 426.201, 741.935 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "901.926, 73.263 722.222, 96.463 715.718, 118.443 722.770, 147.539 880.074, 126.424 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "251.299, 684.017 232.491, 655.284 157.743, 590.405 55.963, 781.899 228.633, 757.929 255.401, 703.377 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "315.225, 468.548 351.828, 547.246 382.008, 555.962 383.301, 555.846 411.229, 490.289 385.930, 452.804 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "220.523, 215.999 185.922, 386.208 202.439, 409.615 309.365, 351.287 339.666, 294.846 336.274, 254.561 224.813, 213.907 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "813.551, 277.532 780.975, 276.055 750.666, 331.802 789.664, 438.390 817.955, 435.832 883.552, 350.162 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "357.830, 645.740 251.299, 684.017 255.401, 703.377 392.061, 785.976 423.580, 748.972 426.201, 741.935 376.456, 646.099 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "815.121, 600.715 760.930, 675.994 838.020, 693.182 833.890, 621.282 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "498.954, 344.586 447.357, 311.934 339.666, 294.846 309.365, 351.287 424.407, 386.003 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "204.475, 425.072 148.101, 574.670 157.743, 590.405 232.491, 655.284 351.828, 547.246 315.225, 468.548 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "447.047, 128.487 568.742, 71.511 570.479, 67.931 552.024, 0.000 488.476, 0.000 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "89.533, 172.145 45.431, 248.156 93.418, 349.131 96.413, 349.942 134.414, 187.941 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "900.098, 527.837 838.543, 554.181 832.500, 559.081 813.786, 587.933 815.121, 600.715 833.890, 621.282 884.109, 636.459 934.659, 563.974 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<polygon points = "934.659, 563.974 884.109, 636.459 901.731, 710.237 977.722, 715.397 1000.000, 705.612 1000.000, 593.781 "
+fill = "none" stroke = "black"/>
+</g>
+<g>
+<circle cx= "835.009" cy="864.523" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "221.034" cy="31.132" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "547.221" cy="691.833" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "992.881" cy="811.618" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "967.695" cy="3.539" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "981.110" cy="274.161" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "798.106" cy="890.138" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "4.783" cy="702.971" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "639.763" cy="887.535" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "503.663" cy="121.569" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "361.294" cy="202.071" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "681.360" cy="788.076" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "740.647" cy="601.261" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "422.088" cy="525.241" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "301.913" cy="826.135" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "316.550" cy="202.720" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "149.114" cy="127.571" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "821.903" cy="5.932" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "763.750" cy="874.817" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "663.606" cy="509.411" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "210.209" cy="874.103" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "36.441" cy="948.784" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "457.989" cy="591.269" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "793.975" cy="512.431" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "807.531" cy="79.125" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "2.818" cy="294.226" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "643.961" cy="289.296" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "773.917" cy="543.967" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "876.757" cy="426.245" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "17.774" cy="191.825" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "820.841" cy="178.754" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "412.667" cy="59.926" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "580.957" cy="576.835" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "761.731" cy="841.942" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "809.735" cy="769.844" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "332.448" cy="11.478" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "13.539" cy="700.168" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "907.365" cy="782.762" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "955.018" cy="151.532" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "987.460" cy="221.102" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "793.598" cy="932.405" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "732.799" cy="405.496" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "679.820" cy="304.767" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "561.557" cy="607.680" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "527.371" cy="791.932" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "352.762" cy="595.791" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "356.345" cy="407.176" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "154.438" cy="35.034" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "387.296" cy="605.092" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "388.570" cy="273.045" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "436.118" cy="72.507" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "620.360" cy="137.322" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "471.957" cy="880.453" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "529.842" cy="659.780" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "988.379" cy="283.899" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "912.577" cy="279.507" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "558.269" cy="494.501" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "462.474" cy="496.810" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "447.584" cy="453.408" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "604.231" cy="145.549" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "979.926" cy="501.456" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "977.002" cy="965.683" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "679.520" cy="636.814" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "855.875" cy="653.767" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "660.119" cy="954.940" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "132.996" cy="250.059" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "95.355" cy="17.639" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "802.111" cy="717.327" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "627.384" cy="922.443" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "680.287" cy="991.906" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "438.667" cy="466.067" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "138.001" cy="800.449" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "762.421" cy="617.667" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "252.956" cy="959.529" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "822.605" cy="495.229" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "823.455" cy="18.277" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "47.944" cy="698.173" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "544.056" cy="752.152" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "343.840" cy="112.274" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "162.872" cy="966.731" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "210.302" cy="122.636" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "492.442" cy="727.247" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "490.301" cy="776.580" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "651.969" cy="45.057" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "435.246" cy="242.496" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "53.153" cy="447.119" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "404.981" cy="677.489" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "809.137" cy="91.566" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "129.847" cy="741.704" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "378.500" cy="506.673" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "287.805" cy="281.530" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "811.874" cy="376.564" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "385.711" cy="687.492" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "815.769" cy="656.070" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "379.419" cy="330.715" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "303.614" cy="541.503" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "488.618" cy="89.435" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "108.062" cy="244.210" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "870.187" cy="606.410" r="3"
+fill = "red" stroke = "red"/>
+</g>
+<g>
+<circle cx= "917.118" cy="639.139" r="3"
+fill = "red" stroke = "red"/>
+</g>
+</svg>

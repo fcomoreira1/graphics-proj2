@@ -84,7 +84,7 @@ void save_svg_animated(const std::vector<Polygon> &polygons,
             fprintf(f, "%3.3f, %3.3f ", (polygons[i][j][0] * 1000),
                     (1000 - polygons[i][j][1] * 1000));
         }
-        fprintf(f, "\"\nfill = \"none\" stroke = \"black\"/>\n");
+        fprintf(f, "\"\nfill = \"blue\" stroke = \"black\"/>\n");
     }
     fprintf(f, "<animate\n");
     fprintf(f, "    id = \"frame%u\"\n", frameid);

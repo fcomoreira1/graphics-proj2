@@ -1,7 +1,7 @@
 #include "random.h"
 
 double uniform_distribution() {
-    static thread_local std::mt19937 generator;
+    static thread_local std::mt19937 generator(42);
     std::uniform_real_distribution<double> distribution(0, 1);
     return distribution(generator);
 }

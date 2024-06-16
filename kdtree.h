@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 
-const int init_k = 20;
+const int init_k = 10;
 
 class PointCloud {
   public:
@@ -50,16 +50,17 @@ class KDTree {
         index = new my_kd_tree_t(3 /*dim*/, cloud, {10 /* max leaf */});
     }
     ~KDTree() { delete index; }
-    void findNeighbors(const double query_pt[3], const int k,
+    std::pair<double, int> findNeighbors(const double query_pt[3], const int k,
                        std::vector<u_long> &ret_indexes) {
-        ret_indexes.resize(k);
+        // ret_indexes.resize(k);
         std::vector<double> out_dist_sqr(k);
         nanoflann::KNNResultSet<double> result_set(k);
         result_set.init(&ret_indexes[0], &out_dist_sqr[0]);
         index->findNeighbors(result_set, query_pt);
         // u_long num_results =
         //     index->knnSearch(query_pt, k, &ret_indexes[0], &out_dist_sqr[0]);
-        ret_indexes.resize(result_set.size());
+        // ret_indexes.resize(result_set.size());
+        return {out_dist_sqr[result_set.size() - 1], result_set.size()};
     }
 
   private:
