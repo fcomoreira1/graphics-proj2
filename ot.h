@@ -9,4 +9,5 @@ struct OptimizationInstance {
 
 std::vector<Polygon> semidiscrete_ot(std::vector<Vector> &points,
                                      const double *lambda,
-                                     const double desired_volume = 1.0);
+                                     const double desired_volume = 1.0,
+                                     double *weights = nullptr);

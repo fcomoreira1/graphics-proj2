@@ -51,10 +51,10 @@ void test_optim_power_diagrams(int num_points = 200){
 }
 
 void test_fluid() {
-    int NPoints = 250;
-    int num_frames = 200;
+    int NPoints = 150;
+    int num_frames = 600;
     double expected_volume = 0.4;
-    double dt = 0.004;
+    double dt = 0.003;
 
     std::vector<Vector> random_points(NPoints);
     for (int i = 0; i < NPoints; i++) {
@@ -63,12 +63,18 @@ void test_fluid() {
     }
     std::cerr << "Creating fluid" << std::endl;
     Fluid fluid(expected_volume, random_points);
+    double *weights = new double[NPoints + 1];
+    for (int i = 0; i < NPoints; i++) {
+        weights[i] = 1.0;
+    }
+    weights[NPoints] = 0.0;
     for (int i = 0; i < num_frames; i++) {
-        fluid.simulate_time_step(dt);
+        fluid.simulate_time_step(dt, weights);
         save_svg_animated(fluid.power_diagrams, "images/image_fluid.svg", i, num_frames);
         // save_frame(fluid.power_diagrams, "image_fluid", i);
         std::cerr << "Saved frame " << i << std::endl;
     }
+    free(weights);
 }
 
 int main(int argc, char *argv[]) {

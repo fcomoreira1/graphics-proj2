@@ -1,5 +1,5 @@
 CXX=g++
-CXXFLAGS=-g -std=c++17 -O1 -fopenmp  
+CXXFLAGS=-g -std=c++17 -O3 -fopenmp  
 #-fsanitize=address 
 
 EXE=render

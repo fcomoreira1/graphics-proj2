@@ -44,11 +44,11 @@ static int progress(void *instance, const lbfgsfloatval_t *x,
                     const lbfgsfloatval_t xnorm, const lbfgsfloatval_t gnorm,
                     const lbfgsfloatval_t step, int n, int k, int ls) {
     static double prev_fx;
-    printf("Iteration %d:\n", k);
-    printf("  fx = %f, x[0] = %f, x[1] = %f\n", fx, x[0], x[1]);
-    printf("  xnorm = %f, gnorm = %f, step = %f\n", xnorm, gnorm, step);
-    printf("\n");
-    if (k > 200 && (prev_fx - fx) < 1e-6) {
+    // printf("Iteration %d:\n", k);
+    // printf("  fx = %f, x[0] = %f, x[1] = %f\n", fx, x[0], x[1]);
+    // printf("  xnorm = %f, gnorm = %f, step = %f\n", xnorm, gnorm, step);
+    // printf("\n");
+    if (k > 100 && (prev_fx - fx) < 1e-6) {
         prev_fx = -1;
         return 1;
     }
@@ -58,20 +58,24 @@ static int progress(void *instance, const lbfgsfloatval_t *x,
 
 std::vector<Polygon> semidiscrete_ot(std::vector<Vector> &points,
                                      const double *lambda,
-                                     const double desired_volume) {
+                                     const double desired_volume,
+                                     double *weights) {
     const int N = points.size();
-    lbfgsfloatval_t *weights = lbfgs_malloc(N + 1);
-    for (int i = 0; i < N; i++)
-        // weights[i] = uniform_distribution() / 10;
-        weights[i] = 1.0;
-    weights[N] = 0.0;
+    bool using_default_weights = false;
+    if (weights == nullptr) {
+        using_default_weights = true;
+        weights = lbfgs_malloc(N + 1);
+        for (int i = 0; i < N; i++)
+            weights[i] = 1.0;
+        weights[N] = 0.0;
+    }
 
     lbfgsfloatval_t fx;
     OptimizationInstance instance = {points, lambda, desired_volume};
 
     lbfgs_parameter_t param;
     param.linesearch = LBFGS_LINESEARCH_BACKTRACKING_WOLFE;
-    param.max_iterations = 1000;
+    param.max_iterations = 200;
     lbfgs_parameter_init(&param);
 
     int ret = lbfgs(N + 1, weights, &fx, evaluate, progress, (void *)&instance,
@@ -81,15 +85,7 @@ std::vector<Polygon> semidiscrete_ot(std::vector<Vector> &points,
                   << std::endl;
     }
     auto Pow = power_diagrams(points, weights, desired_volume < 1.0);
-    std::cout << "Dumping weights" << std::endl;
-    double total_weight = 0.0;
-    for (int i = 0; i < N; i++) {
-        std::cout << "area_" << i << " -> "
-                  << Pow[i].area() << std::endl;
-        total_weight += Pow[i].area();
-    }
-    std::cout << "Area air -> " << 1 - total_weight << std::endl;
-
-    lbfgs_free(weights);
+    if (using_default_weights)
+        lbfgs_free(weights);
     return Pow;
 }
